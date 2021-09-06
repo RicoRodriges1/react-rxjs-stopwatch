@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { fromEvent} from "rxjs";
+import { fromEvent } from "rxjs";
 import { map, buffer, filter, debounceTime } from "rxjs/operators";
 
 
@@ -14,7 +14,7 @@ function BtnComponent({ start, pause, reset, resume, stop, status }) {
             map(list => {
                 return list.length;
             }),
-            filter(x => x===2),
+            filter(x => x === 2),
         )
         click$.subscribe(pause)
     })

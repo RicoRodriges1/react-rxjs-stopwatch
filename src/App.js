@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { interval, Subject} from "rxjs";
-import { takeUntil  } from "rxjs/operators";
+import { interval, Subject } from "rxjs";
+import { takeUntil } from "rxjs/operators";
 import DisplayComponent from './components/DisplayComponent.js';
 import BtnComponent from './components/BtnComponent';
 
@@ -11,7 +11,7 @@ export default function App() {
   const [status, setStatus] = useState(0);
 
   useEffect(() => {
-    
+
     const unsubscribe = new Subject();
     interval(10)
       .pipe(takeUntil(unsubscribe))
@@ -54,7 +54,6 @@ export default function App() {
     setStatus(0);
     handleStart();
   }
-
 
   return (
     <div className="App">
