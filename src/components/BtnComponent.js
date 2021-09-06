@@ -36,37 +36,18 @@ function BtnComponent({ start, pause, reset, resume, stop, status }) {
 
     return (
         <div className="btns">
-
             <div style={startstyle(status)}>
-                <button className="stopwatch-btn stopwatch-btn-blu"
-                    onClick={start}>Start/Stop</button>
+                <button onClick={start}>Start/Stop</button>
             </div>
-
-
-
-
             <div style={runstyle(status)}>
-                <button className="stopwatch-btn stopwatch-btn-red"
-                    onClick={stop}>Start/Stop</button>
-
-                <button className="stopwatch-btn stopwatch-btn-red"
-                    ref={ref} >Wait</button>
-
-                <button className="stopwatch-btn stopwatch-btn-yel"
-                    onClick={reset}>Reset</button>
+                <button onClick={stop}>Start/Stop</button>
+                <button ref={ref} >Wait</button>
+                <button onClick={reset}>Reset</button>
             </div>
-
-
-
             <div style={pausestyle(status)}>
-                <button className="stopwatch-btn stopwatch-btn-blu"
-                    onClick={resume}>Start/Stop</button>
-
-                <button className="stopwatch-btn stopwatch-btn-yel"
-                    onClick={reset}>Reset</button>
+                <button onClick={resume}>Start/Stop</button>
+                <button onClick={reset}>Reset</button>
             </div>
-
-
         </div>
     );
 }
